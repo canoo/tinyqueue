@@ -4,8 +4,9 @@
   "description": "The smallest and simplest JavaScript priority queue",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/browserify index.js -s TinyQueue > tinyqueue.js",
     "pretest": "eslint index.js test.js bench.js",
-    "test": "tape test.js"
+    "test": "./node_modules/.bin/tape test.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/mourner/tinyqueue",
   "devDependencies": {
+    "browserify": "^16.1.0",
     "eslint": "^4.8.0",
     "eslint-config-mourner": "^2.0.1",
     "tape": "^4.6.3"
